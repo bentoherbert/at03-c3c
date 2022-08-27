@@ -1,17 +1,35 @@
 <!DOCTYPE html>
-<html lang="ptBR">
+<html lang="pt-BR">
 
 <head>
-  <meta charset="UTF-8">
+  <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Questão 3</title>
+  <script>
+    window.onload = function () {
+      var nota = parseInt(prompt("Digite a nota do aluno: "));
+
+      const notaCorrigida = arredondar(nota);
+
+      if (notaCorrigida < 40) {
+        document.write(`Aluno foi reprovado com nota ${notaCorrigida}`);
+        return;
+      }
+      else {
+        document.write(`Aluno foi aprovado com nota ${notaCorrigida}`);
+        return;
+      }
+    }
+    function arredondar(nota) {
+      if (nota < 38) {
+        return nota;
+      } else if (nota % 5 >= 3) {
+        return (nota = nota + (5 - (nota % 5)));
+      } else {
+        return (nota = nota - (nota % 5));
+      }
+    }
+  </script>
 </head>
-
-<body>
-
-  <script src="questao3.js"></script>
-</body>
-<label>Nota do Aluno 1:</label>
 
 </html>
