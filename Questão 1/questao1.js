@@ -7,7 +7,7 @@ window.onload = function onloadquestao1() {
     "<input id='lado3' type='text' placeholder='Lado 3' onKeyPress='return SomenteNumero(event)'>" +
     "<input type='button' value='Calcular' onClick='verificaTriangulo()'>";
 };
-
+// Calculo para descobrir o tipo de Triangulo.
 function verificaTriangulo() {
   lado1 = Number(document.getElementById("lado1").value);
   lado2 = Number(document.getElementById("lado2").value);
